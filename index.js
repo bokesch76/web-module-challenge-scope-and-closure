@@ -27,10 +27,18 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
+ *    ***In counter1 the let count = 0 variable is inside the function so it can only be read inside of the function. In counter2 let count = 0
+ *       rests outside the function or globally and therefore can be called upon outside of the function. Also with counter2 the function reaches
+ *      outside of its scope to find count because it is not defined within the function. ***
  * 
  * 2. Which of the two uses a closure? How can you tell?
+ *    ***Both closures would be an example of Closure. In counter1 the variable is located within the function it allows it to be accessed privately
+ *     by the function. Counter2 is also an example of closure since the variable is made private within the function.***
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
+ *    ***Counter1 would be preferable if a programmer did not want the count variable to be accessible outside of the function further down
+ *    in the code. Counter2 would be preferable in instances where a programmer would want the variable to be accessible anywhere in the code
+ *    since it is global.***
  *
 */
 
@@ -56,11 +64,22 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
+function inning(min,max){
 
-    /*Code Here*/
+   let score = Math.floor(Math.random() * (max - min));
+   return score;
 
 }
+
+console.log(inning(0,3));
+console.log(inning(0,3));
+console.log(inning(0,3));
+console.log(inning(0,3));
+console.log(inning(0,3));
+console.log(inning(0,3));
+console.log(inning(0,3));
+console.log(inning(0,3));
+console.log(inning(0,3));
 
 /* Task 3: finalScore()
 
@@ -76,11 +95,25 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
-
+function inning() {
+  let score = Math.floor(Math.random() * 3);
+   return score;
 }
+function finalScore(inning, numOfInnings){
+
+  let runsPer = [{
+    'HOME': 0,
+    'AWAY': 0
+  }]
+
+  for (let i = 0; i <= numOfInnings; i++) {
+    runsPer['HOME'] = inning() + numOfInnings;
+    runsPer['AWAY'] = inning() + numOfInnings;
+  }
+  return runsPer;
+}
+
+console.table(finalScore(inning, 9));
 
 /* Task 4: 
 
@@ -103,8 +136,26 @@ and returns the score at each pont in the game, like so:
 
 Final Score: 6 - 10 */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function inning() {
+  let score = Math.floor(Math.random() * 3);
+   return score;
 }
 
 
+function scoreboard(inning, numOfInnings) {
+  let homeScores = 0;
+  let awayScores = 0;
+
+  let runsPerIn = {
+    'HOME': homeScores,
+    'AWAY': awayScores
+  }
+  for (let i = 1; i <= numOfInnings; i++) {
+    runsPerIn.HOME = runsPerIn.HOME += inning();
+    runsPerIn.AWAY = runsPerIn.AWAY += inning();
+    console.log(runsPerIn);
+      }
+      return runsPerIn
+}
+
+console.log(scoreboard(inning,9))
