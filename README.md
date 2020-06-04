@@ -42,6 +42,8 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+    ***A closure is a function where there is access to an outer function's scope from an inner function.***
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,7 +65,9 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+  ***In the consol.log where it is calling the variable newRoll***
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+    ***It will always show what Dan rolled but what he rolled could be different amongst the two rolls.***
 c. What is the lexical scope of `newRoll`? 
 
 ### Task 3 - Stretch Goals
@@ -102,6 +106,6 @@ addSix(21); // returns 27
 
 Follow these steps for completing your project.
 
-- [ ] Submit a pull request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
-- [ ] Add your Team Lead as a reviewer on the pull request
+- [X] Submit a pull request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
+- [X] Add your Team Lead as a reviewer on the pull request
 - [ ] Your Team Lead will count the project as complete by merging the branch back into master
