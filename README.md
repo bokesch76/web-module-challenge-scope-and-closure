@@ -69,6 +69,7 @@ a. Where is closure used in this code? How can you tell?
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
     ***It will always show what Dan rolled but what he rolled could be different amongst the two rolls.***
 c. What is the lexical scope of `newRoll`? 
+    ***'newRoll' resides inside the function so it is local scope and is called within the function.***
 
 ### Task 3 - Stretch Goals
 
@@ -95,6 +96,7 @@ addSix(21); // returns 27
 ```
 
 3. Research the differences between functional programming and object oriented programming. Then, describe the pros and cons of functional programming vs object-oriented programming. This is a common interview question and great practice!
+  
 
 ## Resources
 
